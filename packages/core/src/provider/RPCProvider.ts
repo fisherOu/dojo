@@ -2,7 +2,6 @@ import { RpcProvider } from "starknet";
 import { Call } from "starknet";
 import { Provider } from "./provider";
 import { Query, WorldEntryPoints } from "../types";
-import logger from "../logging/logger";
 
 export class RPCProvider extends Provider {
     private provider: RpcProvider;
@@ -18,7 +17,7 @@ export class RPCProvider extends Provider {
 
     private log(level: string, message: string) {
         if (this.loggingEnabled) {
-            logger.log(level, message);
+            console.log(level, message);
         }
     }
 
