@@ -43,7 +43,7 @@ impl Sequencer {
         })));
         sequencer.write().await.start();
         let (socket_addr, handle) =
-            KatanaNodeRpc::new(sequencer.clone(), RpcConfig { port: 0 }).run().await.unwrap();
+            KatanaNodeRpc::new(sequencer.clone(), RpcConfig { host: String::from("0.0.0.0"), port: 0 }).run().await.unwrap();
         let url = Url::parse(&format!("http://{}", socket_addr)).expect("Failed to parse URL");
 
         Sequencer { url, handle }
