@@ -47,6 +47,24 @@
         {
             "type": "lldb",
             "request": "launch",
+            "name": "Debug executable 'torii'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=torii",
+                    "--package=torii"
+                ],
+                "filter": {
+                    "name": "torii",
+                    "kind": "bin"
+                }
+            },
+            "args": ["--database-url", "sqlite://home/yubing/.aon/indexer.db"],
+            "cwd": "/home/yubing/workspace/satosea/aon-cairo"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
             "name": "Debug unit tests in executable 'dojo-compile'",
             "cargo": {
                 "args": [
