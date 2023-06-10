@@ -59,7 +59,7 @@
                     "kind": "bin"
                 }
             },
-            "args": ["--database-url", "sqlite://home/yubing/.aon/indexer.db"],
+            "args": ["--database-url", "sqlite://indexer.db"],
             "cwd": "/home/yubing/workspace/satosea/aon-cairo"
         },
         {
